@@ -20,7 +20,7 @@
 define('MY_PLUGIN_SLUG', 'git-update/git-update.php'); // folder/file name
 define('MY_PLUGIN_GITHUB_USER', 'sudipgit');
 define('MY_PLUGIN_GITHUB_REPO', 'git-update');
-define('MY_PLUGIN_VERSION', '1.2.0');
+define('MY_PLUGIN_VERSION', '1.2.1');
 // ======================================
 
 
@@ -47,7 +47,7 @@ add_filter('pre_set_site_transient_update_plugins', function($transient) {
             'slug'        => dirname(MY_PLUGIN_SLUG),
             'new_version' => $latest_version,
             'url'         => "https://github.com/".MY_PLUGIN_GITHUB_USER."/".MY_PLUGIN_GITHUB_REPO,
-            'package'     => $release->zipball_url, // download zip
+            'package' => "https://github.com/".MY_PLUGIN_GITHUB_USER."/".MY_PLUGIN_GITHUB_REPO."/releases/download/{$release->tag_name}/git-update.zip",  
         ];
     }
     return $transient;
