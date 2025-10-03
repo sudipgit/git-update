@@ -47,7 +47,7 @@ add_filter('pre_set_site_transient_update_plugins', function($transient) {
             'slug'        => dirname(MY_PLUGIN_SLUG),
             'new_version' => $latest_version,
             'url'         => "https://github.com/".MY_PLUGIN_GITHUB_USER."/".MY_PLUGIN_GITHUB_REPO,
-            'package' => "https://github.com/".MY_PLUGIN_GITHUB_USER."/".MY_PLUGIN_GITHUB_REPO."/releases/download/{$release->tag_name}/git-update.zip",  
+            'package'     => $release->zipball_url, // download zip
         ];
     }
     return $transient;
