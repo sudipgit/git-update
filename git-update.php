@@ -2,13 +2,14 @@
 /**
  * Plugin Name: Git Update
  * Description: Example plugin with direct GitHub updates (no external libraries).
- * Version: 1.2.3
+ * Version: 1.2.4
  * Author: Sudip
  * Plugin URI: https://github.com/sudipgit/git-update
  */
  
  
 /* Change Log:
+    v1.2.4    twiks some issues
     v1.2.3    twiks some issues
     v1.2.2    Fixed other some issues
     v1.2.1    Fixed some issues
@@ -22,7 +23,7 @@
 define('MY_PLUGIN_SLUG', 'git-update/git-update.php'); // folder/file name
 define('MY_PLUGIN_GITHUB_USER', 'sudipgit');
 define('MY_PLUGIN_GITHUB_REPO', 'git-update');
-define('MY_PLUGIN_VERSION', '1.2.3');
+define('MY_PLUGIN_VERSION', '1.2.4');
 // ======================================
 
 
