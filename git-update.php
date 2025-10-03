@@ -2,13 +2,14 @@
 /**
  * Plugin Name: Git Update
  * Description: Example plugin with direct GitHub updates (no external libraries).
- * Version: 1.2.0
+ * Version: 1.2.1
  * Author: Sudip
  * Plugin URI: https://github.com/sudipgit/git-update
  */
  
  
 /* Change Log:
+    v1.2.1    Fixed some issues
     v1.2.0    Update format
     v1.1.1    Initial release
           
