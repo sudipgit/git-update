@@ -2,18 +2,18 @@
 /**
  * Plugin Name: Git Update
  * Description: Example plugin with direct GitHub updates (no external libraries).
- * Version: 1.0.0
+ * Version: 1.1.1
  * Author: Sudip
- * Plugin URI: https://github.com/yourusername/my-plugin
+ * Plugin URI: https://github.com/sudipgit/git-update
  */
 
 // =============== CONFIG ===============
-define('MY_PLUGIN_SLUG', 'my-custom-plugin/my-plugin.php'); // folder/file name
-define('MY_PLUGIN_GITHUB_USER', 'yourusername');
-define('MY_PLUGIN_GITHUB_REPO', 'my-plugin');
-define('MY_PLUGIN_VERSION', '1.0.0');
+define('MY_PLUGIN_SLUG', 'git-update/git-update.php'); // folder/file name
+define('MY_PLUGIN_GITHUB_USER', 'sudipgit');
+define('MY_PLUGIN_GITHUB_REPO', 'git-update');
+define('MY_PLUGIN_VERSION', '1.1.1');
 // ======================================
-/*
+
 // 1. Check for updates
 add_filter('pre_set_site_transient_update_plugins', function($transient) {
     if (empty($transient->checked)) return $transient;
@@ -53,7 +53,7 @@ add_filter('plugins_api', function($res, $action, $args) {
     $release = json_decode(wp_remote_retrieve_body($remote));
 
     $res = (object)[
-        'name'          => 'My Custom Plugin',
+        'name'          => 'Git Update',
         'slug'          => dirname(MY_PLUGIN_SLUG),
         'version'       => ltrim($release->tag_name, 'v'),
         'author'        => '<a href="https://github.com/'.MY_PLUGIN_GITHUB_USER.'">'.MY_PLUGIN_GITHUB_USER.'</a>',
@@ -65,7 +65,7 @@ add_filter('plugins_api', function($res, $action, $args) {
     ];
     return $res;
 }, 10, 3);
-*/
+
 
 add_action('wp_footer', function(){
 	
